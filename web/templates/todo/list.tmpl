@@ -1,0 +1,16 @@
+{{ define "todo/list.tmpl" }}
+<html>
+<head>
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <h1>ToDo List</h1>
+  <ul>
+    {{ range .Todos }}
+      <li>{{ .Tak }}</li>
+    {{ end }}
+  </ul>
+  <a href="/todos/create">add todo</a>
+</body>
+</html>
+{{ end }}
